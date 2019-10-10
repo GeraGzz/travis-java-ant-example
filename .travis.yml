@@ -1,2 +1,15 @@
 language: java
 script: ant main
+
+# Sonar #
+addons:
+  sonarcloud:
+    organization: "geragzz"
+    token:
+      secure: "fd42b8b6a5c2005ebc0e70ec59f1c21910766ac2" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - sonar-scanner
+  
+ # Sonar #
